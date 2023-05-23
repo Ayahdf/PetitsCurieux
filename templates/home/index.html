@@ -5,7 +5,7 @@
 {% load static %}
 <head>
     <meta charset="utf-8">
-    <title>GoStudy - eLearning Kids</title>
+    <title>PetitsCurieux - eLearning Kids</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -31,18 +31,59 @@
 
     <!-- Template Stylesheet -->
     <link href="{% static 'css/style.css' %}" rel="stylesheet">
-    <style>#btn:hover{background-color:#06bbcc;color:white}</style>
+    <style>#btn:hover{background-color:#06bbcc;color:white}
+.service-item:hover{
+        background-color: #F3B9BB;
+    }
+    </style>
+    
 </head>
 
 <body>
     
-    <!-- Spinner Start -->
-     {% comment %} <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-            <span class="sr-only">Loading...</span>
+     <!-- About Start -->
+     <div class="container-xxl py-5" style="z-index: 99;">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
+                    <div class="position-relative h-100">
+                        <img class="img-fluid position-absolute w-100 h-100" src="{% static 'img/hautpage.jpg' %}" alt="" style="object-fit: cover;">
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <h6 class="section-title bg-white text-start text-primary pe-3">P.C</h6>
+                    <h1 class="mb-4">Bienvenue!</h1>
+                    <p class="mb-4">Notre site de formation des enfants est un programme en ligne conçu pour aider les enfants à apprendre de manière amusante et interactive.   </p>
+                    <p class="mb-4">Nous proposons des cours dans différentes matières, y compris les mathématiques, les sciences et les langues. Nos cours sont adaptés aux enfants de tous âges et de tous niveaux, et sont dispensés par des enseignants qualifiés et expérimentés.</p>
+                    <p class="mb-4"> Rejoignez notre communauté aujourd'hui pour aider votre enfant à réussir à l'école et dans la vie.</p>
+
+                    <!--<div class="row gy-2 gx-4 mb-4">
+                        <div class="col-sm-6">
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Dashboard Instructors</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Online Classes</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>International Certificate</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Management Courses</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Skilled Instructors</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Professional platform</p>
+                        </div>
+                    </div>-->
+                     
+                    <a class="btn btn-secondary py-3 px-5 mt-2" style='border-radius:50px' href="{% url 'etudiant_register' %}">Inscrivez-vous</a>
+                </div> 
+            </div>
         </div>
-    </div>  {% endcomment %}
-    <!-- Spinner End -->
+    </div></div>
+    <!-- About End -->
 
 
     <!-- Navbar Start -->
@@ -52,12 +93,12 @@
 
     <!-- Carousel Start -->
     
-
-    <div class=" w-100 bg-white" style="height:70vh;background-image:url('{% static 'img/carousel-1.png' %}');background-size:cover; background-position: center; 
+{% comment %} 
+    <div class=" w-100 bg-white" style="height:80vh;background-image:url('{% static 'img/slider.jpg' %}');background-size:cover; background-position: center; 
     background-repeat: no-repeat;">
             <div class="container p-5">
                 <div class="mt-5 w-75">
-                <h1 class="fs-5 mb-3" style="color:#08b2c3;">BEST ONLINE COURSES</h1>
+                <h1 class="fs-5 mb-3" style="color:#08b2c3;">Meilleure </h1>
                 <h1 class="mb-4 text-white" style="font-size:4em;">Your Gateway to Online Education</h1>
                
                 <footer class="text-white fs-6 mb-5">Our eLearning platform provides a comprehensive and user-friendly online learning experience. It offers a wide range of courses and educational materials that can be accessed anytime, anywhere.</footer>
@@ -68,166 +109,28 @@
     </a>
     {% else %}
     <a href="{% url 'etudiant_register' %}">
-        <button type="submit" style="width: 200px;height:50px;border:none;transition-duration:0.4s;" id='btn'>Join Now</button>
+        <button type="submit" style="width: 200px;height:50px;border:none;transition-duration:0.4s;border-radius: 50%;" id='btn'>Join Now</button>
     </a>
     {% endif %}
             </div>
             </div>
 
-</div>
+</div> {% endcomment %}
 
     <!-- Carousel End -->
 
  
-
-
-    <!-- Service Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="row g-4">
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item text-center pt-3">
-                        <div class="p-4">
-                            <i class="fa fa-3x fa-graduation-cap text-primary mb-4"></i>
-                            <h5 class="mb-3">Skilled Instructors</h5>
-                            <p>designed to provide employees with the targeted training they need to gain the knowledge and abilities necessary </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item text-center pt-3">
-                        <div class="p-4">
-                            <i class="fa fa-3x fa-globe text-primary mb-4"></i>
-                            <h5 class="mb-3">Online Classes</h5>
-                            <p>An online class is a course conducted over the Internet. They are generally conducted through a learning management system</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item text-center pt-3">
-                        <div class="p-4">
-                            <i class="fa fa-3x fa-home text-primary mb-4"></i>
-                            <h5 class="mb-3">Home Projects</h5>
-                            <p>What are project ideas?
-                                Project Ideas are where you begin documenting proposals for future research grant applications.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="service-item text-center pt-3">
-                        <div class="p-4">
-                            <i class="fa fa-3x fa-book-open text-primary mb-4"></i>
-                            <h5 class="mb-3">Book Library</h5>
-                            <p>Choose among free epub and Kindle eBooks, download them or read them online. You will find the world's great literature here.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    
     <!-- Service End -->
 
 
 
-       <!-- Courses Start -->
-   <div class="container-xxl py-5">
-    <div class="container">
-        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h6 class="section-title bg-white text-center text-primary px-3">Courses</h6>
-            <h1 class="mb-5">Popular Courses</h1>
-        </div>
-        <div class="row g-4 justify-content-center">
-            {% for c in cours %}
-           
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="course-item bg-light">
-                    <div class="position-relative overflow-hidden">
-                        <img class="img-fluid object-fit-cover border rounded" src="{{c.cover.url}}" width="420" style="height:230px"   alt="">
-                        <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
-                            <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
-                            {% comment %} {% if request.user == %}{% endif %} {% endcomment %}
-                            <a href="{% url 'coursedetails' c.id %}" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Join Now</a>
-                        </div>
-                    </div>
-                    <div class="text-center p-4 pb-0">
-                        {% if c.prix == 0 %}
-                        <h3 class="mb-0 badge bg-secondary text-wrap mb-2" style="font-size:1.5em;">Free</h3>
-                        {% else %}
-                        <h3 class="mb-0"><script>document.write(parseFloat({{c.prix}}*10))</script> DH</h3>
-                        {% endif %}
-                        <div class="mb-3">
-                            
-                            <small class="fa fa-star text-primary"></small>
-                            <small class="fa fa-star text-primary"></small>
-                            <small class="fa fa-star text-primary"></small>
-                            <small class="fa fa-star text-primary"></small>
-                            <small class="fa fa-star text-primary"></small>
-                         
-                            <small>({{c.avis}})</small>
-                            
-                        </div>
-                        <h5 class="mb-4">{{c.titre}}</h5>
-                    </div>
-                    <div class="d-flex border-top">
-                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie text-primary me-2"></i>{{c.Enseignant}}</small>
-                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-clock text-primary me-2"></i>{{c.duration}} Hrs</small>
-                         
-                        <small class="flex-fill text-center py-2"><i class="fas fa-tags" style="color: #09bccd;position: relative;bottom:-1px;"></i><span class="m-1"></span>{{c.categorie}} </small>
-                        
-                    </div>
-                </div>
-            </div>
-{% endfor %}
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Courses End -->
 
 
 
 
 
-   <!-- About Start -->
-   <div class="container-xxl py-5" style="z-index: 99;">
-    <div class="container">
-        <div class="row g-5">
-            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
-                <div class="position-relative h-100">
-                    <img class="img-fluid position-absolute w-100 h-100" src="{% static 'img/about.jpg' %}" alt="" style="object-fit: cover;">
-                </div>
-            </div>
-            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                <h6 class="section-title bg-white text-start text-primary pe-3">GoStudy</h6>
-                <h1 class="mb-4">Welcome to eLEARNING</h1>
-                <p class="mb-4">GoStudy is an innovative e-learning platform that offers a comprehensive range of courses and educational resources.  </p>
-                <p class="mb-4">It provides a user-friendly interface that allows students to access high-quality educational content anytime, anywhere. GoStudy offers a diverse selection of courses covering various subjects, including academics, professional development, and personal growth.</p>
-                <div class="row gy-2 gx-4 mb-4">
-                    <div class="col-sm-6">
-                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Dashboard Instructors</p>
-                    </div>
-                    <div class="col-sm-6">
-                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Online Classes</p>
-                    </div>
-                    <div class="col-sm-6">
-                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>International Certificate</p>
-                    </div>
-                    <div class="col-sm-6">
-                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Management Courses</p>
-                    </div>
-                    <div class="col-sm-6">
-                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Skilled Instructors</p>
-                    </div>
-                    <div class="col-sm-6">
-                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Professional platform</p>
-                    </div>
-                </div>
-                <a class="btn btn-primary py-3 px-5 mt-2" href="">Read More</a>
-            </div>
-        </div>
-    </div>
-</div></div>
-<!-- About End -->
+
 
 
 
@@ -243,23 +146,16 @@
   <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3">Categories</h6>
-                <h1 class="mb-5">Courses Categories</h1>
+                <h1 class="mb-5">Catégories proposées</h1>
             </div>
             <div class="row g-4">
                 {% for ct in cats %}
 
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="team-item bg-light">
+                    <div class="team-item bg-light pt-3">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src="{{ct.cover.url}}" width="350" alt="">
                         </div>
                         <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
-                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
                         </div>
                         <div class="text-center p-4">
                         <a href="{% url 'CoursesListS' ct.id %}"><h5 class="mb-0">{{ct.nom}}</h5></a>
@@ -275,59 +171,71 @@
     <!-- Categories Start -->
 
 
+  
 
+    
+
+    <!-- Service Start -->
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3">Courses</h6>
-                <h1 class="mb-5">Lastest Courses</h1>
+                <h1 class="mb-5">Informations supplémentaire</h1>
             </div>
-            <div class="row g-4 justify-content-center">
-                {% for c in coursR %}
-               
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="course-item bg-light">
-                        <div class="position-relative overflow-hidden">
-                            <img class="img-fluid object-fit-cover border rounded" src="{{c.cover.url}}" width="420" style="height:230px"   alt="">
-                            <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
-                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
-                                {% comment %} {% if request.user == %}{% endif %} {% endcomment %}
-                                <a href="{% url 'coursedetails' c.id %}" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Join Now</a>
-                            </div>
-                        </div>
-                        <div class="text-center p-4 pb-0">
-                            {% if c.prix == 0 %}
-                            <h3 class="mb-0 badge bg-secondary text-wrap mb-2" style="font-size:1.5em;">Free</h3>
-                            {% else %}
-                            <h3 class="mb-0"><script>document.write(parseFloat({{c.prix}}*10))</script> DH</h3>
-                            {% endif %}
-                            <div class="mb-3">
-                                
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                             
-                                <small>({{c.avis}})</small>
-                                
-                            </div>
-                            <h5 class="mb-4">{{c.titre}}</h5>
-                        </div>
-                        <div class="d-flex border-top">
-                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie text-primary me-2"></i>{{c.Enseignant}}</small>
-                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-clock text-primary me-2"></i>{{c.duration}} Hrs</small>
-                             
-                            <small class="flex-fill text-center py-2"><i class="fas fa-tags" style="color: #09bccd;position: relative;bottom:-1px;"></i><span class="m-1"></span>{{c.categorie}} </small>
-                            
+            <div class="row g-4">
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" id="slider-3" data-wow-delay="0.1s">
+                    <div class="service-item text-center pt-3" style="border-radius: 64px!important;">
+                        
+                        <div class="p-4">
+                            {% comment %} <i class="fa fa-3x fa-light fa-bullseye-arrow text-secondary mb-4"></i>
+                            <i class="fa-sharp fa-regular fa-bullseye text-secondary mb-4"></i>
+                            <i class="fa-sharp fa-light fa-bullseye text-secondary mb-4"></i> {% endcomment %}
+                            {% comment %} <i class="fa fa-3x fa-solid fa-bullseye-arrow text-secondary mb-4"></i> {% endcomment %}
+                            <h5 class="mb-3">Objectifs de P.C</h5>
+                            <p>Renforcer les connaissances acquises en classe tout en mettant ton enfant dans un bon délire.</p>
+                            <p>Développer la compréhension et la réflexion critique.</p>
+                            <p>Promouvoir l'apprentissage collaboratif chez la future génération.</p>
+                            <p> </p>
                         </div>
                     </div>
                 </div>
-  {% endfor %}
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item text-center pt-3" style="border-radius: 64px;">
+                        <div class="p-4">
+                             {% comment %} <i class="fa fa-3x fa-globe text-secondary mb-4"></i> {% endcomment %}
+                            <h5 class="mb-3">Comment on apprend à nos poussins🐣</h5>
+                            <p>On les ecoute attentivement et leur donne des commentaires constructifs pour les aider à améliorer leurs compétences.</p>
+                            <p>On leurs crée un environnement d'apprentissage positif et encourageant.</p>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item text-center pt-3" style="border-radius: 64px;">
+                        <div class="p-4">
+                            {% comment %} <i class="fa fa-3x fa-home text-secondary mb-4"></i> {% endcomment %}
+                            <h5 class="mb-3">Nos motivations</h5>
+                            <p>La satisfaction de voir les enfants réussir et progresser grâce à nos efforts.</p>
+                            <p>Notre désir d'offrir des ressources éducatives de qualité aux enfants.</p>
+                            <p>🥰Eliasso habibo🥰</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="service-item text-center pt-3" style="border-radius: 64px;">
+                        <div class="p-4">
+                            {% comment %} <i class="fa fa-3x fa-book-open text-secondary mb-4"></i> {% endcomment %}
+                            <h5 class="mb-3">Votre mission</h5>
+                            <p>Nous rejoindre ;).</p>
+                            <br>
+                            <a class="btn btn-secondary py-3 px-5 mt-2" style='border-radius:50px' href="{% url 'etudiant_register' %}">Je suis partant!🏃‍♂️</a>
+
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
 
  
 
